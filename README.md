@@ -10,7 +10,20 @@ Many tasks in the world of auditing require verifying that a specific policy or 
 
 ## The Task
 
-We have taken one particular example of this: a control that ensures systems can't be changed unless a set of prerequisites is true. You are provided with the control description, control attributes, and a few evidence samples, in this case, screenshots of GitHub pull requests showing the changes made.
+We provide two example controls under `data/`, each with its control description, control attributes, and evidence samples:
+
+### 1. Independent Code Review (`data/independent-code-review/`)
+
+A control that ensures systems can't be changed unless a set of prerequisites is true. You are provided with the control description, control attributes, a testing policy, and a few evidence samples, in this case, screenshots of GitHub pull requests showing the changes made.
+
+### 2. User Access Review (`data/user-access-review/`)
+
+A control that ensures user access to systems is periodically reviewed and remains appropriate. The evidence is two Excel workbooks:
+
+- `uar-netsuite-q2-2026.xlsx` — the Q2 2026 access review performed on NetSuite (Production), with the raw system access export (source data), the reviewer's worksheet, and a summary sheet documenting one observation.
+- `hris-employee-export.xlsx` — an HRIS (Workday) employee roster export used as the independent source of truth.
+
+Testing this control involves **reperforming** the review: reconcile the NetSuite access export against the HRIS roster and compare your conclusion to the reviewer's.
 
 ## Expected Output
 
