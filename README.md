@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the our Audit Agent Challenge. This task will give you a flavour of the work you will be doing at Bead and help us understand how you tackle loosely defined problems. This repository contains all instructions and supporting documents needed to get started.
+Welcome to our Audit Agent Challenge. This task will give you a flavor of the work you will be doing at Bead and help us understand how you tackle loosely defined problems. This repository contains all instructions and supporting documents needed to get started.
 
 ## Background
 
@@ -14,16 +14,16 @@ We have taken one particular example of this: a control that ensures systems can
 
 ## Expected Output
 
-* For each sample and control attribute provide a JSON object that includeds the assements and contexual details of how the conclussion was formed
-* The assessment can be SUCCESS, FAIL, FURTHER_EVIDENCE_REQUIRED
+- For each sample and control attribute, provide a JSON object that includes the assessments and contextual details of how the conclusion was formed
+- The assessment can be SUCCESS, FAIL, FURTHER_EVIDENCE_REQUIRED
 
 ## Constraints
 
-* You can use any langugage, framework, models, APIs or technologies you feel best suited for the task. We have [developed our own harness](https://github.com/bead-ai/zeitlich/) if you need a starting point.
-* There are no cost or performance requirements. Accuracy is the only objective for now.
-* We will let you decide how generic your solution should be. For this task, it is enough if it can cover this particular control with various inputs.
-* Auditing often means making judgments with imperfect input. A good auditor balances detail and efficiency.
-* The more detailed and auditable the output, the better.
+- You can use any language, framework, models, APIs, or technologies you feel best suited for the task. We have [developed our own harness](https://github.com/bead-ai/zeitlich/) if you need a starting point.
+- There are no cost or performance requirements. Accuracy is the only objective for now.
+- We will let you decide how generic your solution should be. For this task, it is enough if it can cover this particular control with various inputs.
+- Auditing often means making judgments with imperfect input. A good auditor balances detail and efficiency.
+- The more detailed and auditable the output, the better.
 
 ## Submission
 
@@ -37,5 +37,5 @@ After submission, we will test your solution with more samples for this control 
 
 ## Notes
 
-* If there are any open questions that need clarification you can reach out to the team.
-* If you came accross this repostory and think this is a fun problem to solve - we are hiring https://usebead.ai/careers
+- If there are any open questions that need clarification you can reach out to the team.
+- If you came across this repository and think this is a fun problem to solve - we are hiring https://usebead.ai/careers
