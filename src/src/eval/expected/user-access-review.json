@@ -1,0 +1,51 @@
+{
+  "control": "user-access-review",
+  "notes": "One sample: the Q2 2026 NetSuite review workbook plus the Workday roster. The reviewer found one terminated user (Danielle Goodwin) but reperformance over the full population also finds kevin.lewis — terminated 2021-07-26, account still Active, last login 2026-06-04, marked 'Retain' — which contradicts the summary's 'no other exceptions' claim. Ten more terminated workers' (inactive) accounts are retained with boilerplate comments, several workers are on leave, 29 accounts lack MFA (incl. an active Administrator), and the reviewer herself does not appear in the HRIS roster. Finding kevin.lewis is the non-negotiable.",
+  "attributes": [
+    {
+      "match": "periodic",
+      "samples": {
+        "sample-1": {
+          "accept": ["SUCCESS", "FURTHER_EVIDENCE_REQUIRED"],
+          "preferred": "SUCCESS",
+          "mustMention": ["Q2 2026|2026-06-30"],
+          "shouldMention": ["prior|previous|single|one (review|instance|quarter)", "2026-06-26|26 Jun"]
+        }
+      }
+    },
+    {
+      "match": "owner|approved",
+      "samples": {
+        "sample-1": {
+          "accept": ["SUCCESS", "FAIL", "FURTHER_EVIDENCE_REQUIRED"],
+          "preferred": "FURTHER_EVIDENCE_REQUIRED",
+          "mustMention": ["Nadkarni|Priya"],
+          "shouldMention": ["not (in|found|present)|absent|could not (be )?(corroborat|verif|confirm)", "boilerplate|generic|identical|rubber|template"]
+        }
+      }
+    },
+    {
+      "match": "remediat",
+      "samples": {
+        "sample-1": {
+          "accept": ["FAIL"],
+          "preferred": "FAIL",
+          "mustMention": ["kevin\\.lewis|Kevin Lewis", "Goodwin|ITSM-48217"],
+          "shouldMention": ["closed|closure|completion|completed|confirm"]
+        }
+      }
+    }
+  ],
+  "sampleChecks": {
+    "sample-1": {
+      "mustMention": ["kevin\\.lewis|Kevin Lewis", "2021-07-26", "2026-06-04|June 2026"],
+      "shouldMention": [
+        "(10|ten|eleven|11).{0,60}(terminated|inactive)",
+        "on.?leave",
+        "MFA|multi-?factor",
+        "no (other )?exceptions|all other",
+        "Administrator"
+      ]
+    }
+  }
+}

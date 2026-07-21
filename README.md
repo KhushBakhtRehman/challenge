@@ -1,5 +1,7 @@
 # Bead Audit Agent Challenge
 
+> **Submission (Khush Bakht Rehman):** the solution — `attest`, an evidence-cited audit agent with an adversarial quality-review pass — lives in [`src/`](src). Start with [`src/README.md`](src/README.md) for setup, design decisions and measured results; committed example output is under [`src/sample-runs/`](src/sample-runs). Run it with `cd src && npm install && npm run audit -- ../data`.
+
 ## Overview
 
 Welcome to our Audit Agent Challenge. This task will give you a flavor of the work you will be doing at Bead and help us understand how you tackle loosely defined problems. This repository contains all instructions and supporting documents needed to get started.

@@ -1,0 +1,45 @@
+{
+  "control": "emergency-change-approval",
+  "notes": "Synthetic control used to test genericity on a domain the agent has never seen, with planted defects: CHG-2111 was CAB-approved by email but never recorded in the change log (population completeness -> attribute 1 fails); CHG-2107 has no retrospective approval and CHG-2104's approval took 9 business days (attribute 2 fails; CHG-2102 at exactly 5 business days is the boundary case that must NOT be flagged); CHG-2109 explicitly lacks post-implementation test evidence and the claimed attachments for the rest are not provided (attribute 3).",
+  "attributes": [
+    {
+      "match": "recorded|change log",
+      "samples": {
+        "sample-1": {
+          "accept": ["FAIL"],
+          "preferred": "FAIL",
+          "mustMention": ["CHG-2111"],
+          "shouldMention": ["completeness|independent|mailbox"]
+        }
+      }
+    },
+    {
+      "match": "5 business days|within",
+      "samples": {
+        "sample-1": {
+          "accept": ["FAIL"],
+          "preferred": "FAIL",
+          "mustMention": ["CHG-2107", "CHG-2104"],
+          "shouldMention": ["9 business|nine business", "CHG-2102"]
+        }
+      }
+    },
+    {
+      "match": "testing evidence|post-implementation",
+      "samples": {
+        "sample-1": {
+          "accept": ["FAIL", "FURTHER_EVIDENCE_REQUIRED"],
+          "preferred": "FAIL",
+          "mustMention": ["CHG-2109"],
+          "shouldMention": ["attach|not provided|retained"]
+        }
+      }
+    }
+  ],
+  "sampleChecks": {
+    "sample-1": {
+      "mustMention": ["CHG-2111", "CHG-2107", "CHG-2104", "CHG-2109"],
+      "shouldMention": ["delegate|on leave"]
+    }
+  }
+}

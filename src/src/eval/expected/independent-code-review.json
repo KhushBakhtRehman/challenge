@@ -1,0 +1,65 @@
+{
+  "control": "independent-code-review",
+  "notes": "sample-1 = microsoft/TypeScript PR #62754 (review approved before an author merge, CI green, coverage report present, but '36 of 37 checks passed' at the merge). sample-2 = denoland/deno PR #31272 (independent approval before merge, but '33 of 36 checks passed', the head CI run is a re-run, and no coverage evidence exists at all). The testing-policy attribute is a judgment call in both samples; the graded substance is whether the agent surfaces the check-count discrepancies and the missing coverage evidence.",
+  "attributes": [
+    {
+      "match": "prior to (committing|merging)|before.*(commit|merge)",
+      "samples": {
+        "sample-1": {
+          "accept": ["SUCCESS"],
+          "preferred": "SUCCESS",
+          "mustMention": ["merge"],
+          "shouldMention": ["approv.{0,40}(before|prior)|prior to merge"]
+        },
+        "sample-2": {
+          "accept": ["SUCCESS"],
+          "preferred": "SUCCESS",
+          "mustMention": ["merge"],
+          "shouldMention": ["commit.{0,80}(after|following).{0,40}approv|approv.{0,60}(final|last|latest) commit"]
+        }
+      }
+    },
+    {
+      "match": "independent",
+      "samples": {
+        "sample-1": {
+          "accept": ["SUCCESS"],
+          "preferred": "SUCCESS",
+          "mustMention": ["RyanCavanaugh", "jakebailey"],
+          "shouldMention": ["author"]
+        },
+        "sample-2": {
+          "accept": ["SUCCESS"],
+          "preferred": "SUCCESS",
+          "mustMention": ["dsherret", "bartlomieju"],
+          "shouldMention": ["author"]
+        }
+      }
+    },
+    {
+      "match": "testing",
+      "samples": {
+        "sample-1": {
+          "accept": ["SUCCESS", "FURTHER_EVIDENCE_REQUIRED"],
+          "preferred": "FURTHER_EVIDENCE_REQUIRED",
+          "mustMention": ["36 of 37|37 checks|one check|1 check"],
+          "shouldMention": ["coverage", "80%|threshold"]
+        },
+        "sample-2": {
+          "accept": ["FAIL", "FURTHER_EVIDENCE_REQUIRED"],
+          "preferred": "FURTHER_EVIDENCE_REQUIRED",
+          "mustMention": ["33 of 36|three checks|3 checks", "coverage"],
+          "shouldMention": ["re-?run", "canary|skipped"]
+        }
+      }
+    }
+  ],
+  "sampleChecks": {
+    "sample-1": {
+      "shouldMention": ["Copilot", "auto-?merge|squash"]
+    },
+    "sample-2": {
+      "shouldMention": ["Copilot", "breaking"]
+    }
+  }
+}

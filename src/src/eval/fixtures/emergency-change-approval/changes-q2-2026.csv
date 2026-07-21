@@ -1,0 +1,11 @@
+Change ID,Description,Severity,Deployed At,Deployed By,Retro Approval Date,Approved By,Post-Implementation Test Evidence
+CHG-2101,Hotfix: null pointer in invoice PDF renderer,P2,2026-04-07,d.okafor,2026-04-09,CAB (H. Ostrowski),Yes - attached to ticket
+CHG-2102,Rotate compromised S3 access key,P1,2026-04-10,s.lindqvist,2026-04-17,CAB (H. Ostrowski),Yes - attached to ticket
+CHG-2103,Increase payment worker pool after queue backlog,P2,2026-04-22,m.tan,2026-04-24,CAB (H. Ostrowski),Yes - attached to ticket
+CHG-2104,Roll back faulty pricing config push,P1,2026-05-06,d.okafor,2026-05-19,CAB (H. Ostrowski),Yes - attached to ticket
+CHG-2105,Patch OpenSSL CVE-2026-4417 on edge proxies,P1,2026-05-12,s.lindqvist,2026-05-14,CAB (H. Ostrowski),Yes - attached to ticket
+CHG-2106,Restart stuck settlement batch job,P3,2026-05-27,j.baird,2026-05-29,CAB (H. Ostrowski),Yes - attached to ticket
+CHG-2107,Disable failing fraud-scoring rule FS-114,P1,2026-06-03,m.tan,,,Yes - attached to ticket
+CHG-2108,Hotfix: duplicate webhook deliveries,P2,2026-06-10,j.baird,2026-06-12,CAB (H. Ostrowski),Yes - attached to ticket
+CHG-2109,Emergency index rebuild on ledger DB,P1,2026-06-16,d.okafor,2026-06-18,CAB (H. Ostrowski),No
+CHG-2110,Bump rate limits for partner API during outage recovery,P2,2026-06-24,s.lindqvist,2026-06-26,CAB (H. Ostrowski),Yes - attached to ticket

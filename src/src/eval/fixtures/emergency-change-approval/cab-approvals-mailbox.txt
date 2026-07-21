@@ -1,0 +1,61 @@
+Mailbox export: cab-approvals@northpeakfinancial.com
+Generated: 2026-06-30 17:02 UTC
+Filter: subject contains "Retrospective approval", Q2 2026
+--------------------------------------------------------------------
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-04-09 14:11 UTC
+Subject: Retrospective approval - CHG-2101
+CAB reviewed the emergency change CHG-2101 (invoice PDF renderer hotfix).
+Approved retrospectively. Post-implementation test results reviewed.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-04-17 09:40 UTC
+Subject: Retrospective approval - CHG-2102
+CAB approves the emergency key rotation CHG-2102. Please keep the incident
+report linked from the ticket.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-04-24 15:55 UTC
+Subject: Retrospective approval - CHG-2103
+Approved. Capacity change looks sound; monitor queue depth for a week.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-05-19 11:02 UTC
+Subject: Retrospective approval - CHG-2104
+Apologies for the delayed review - I was on leave and no delegate was
+assigned. CAB approves the pricing config rollback CHG-2104.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-05-14 10:26 UTC
+Subject: Retrospective approval - CHG-2105
+Approved. Good turnaround on the CVE patch.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-05-29 16:03 UTC
+Subject: Retrospective approval - CHG-2106
+Approved.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-06-12 13:47 UTC
+Subject: Retrospective approval - CHG-2108
+Approved. Duplicate webhook fix verified by the integrations team.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-06-18 09:12 UTC
+Subject: Retrospective approval - CHG-2109
+Approved, conditional on the missing post-implementation test evidence
+being attached by end of week. DBA team to confirm index statistics.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-06-23 10:38 UTC
+Subject: Retrospective approval - CHG-2111
+CAB approves emergency change CHG-2111 (payments gateway TLS certificate
+replacement, deployed 2026-06-19 by m.tan). Note: I could not find this
+one in the emergency change log - please make sure it gets recorded.
+
+From: Helen Ostrowski <h.ostrowski@northpeakfinancial.com>
+Date: 2026-06-26 14:20 UTC
+Subject: Retrospective approval - CHG-2110
+Approved. Rate limits to be restored to normal after partner confirms
+recovery.
